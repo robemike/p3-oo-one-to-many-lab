@@ -21,7 +21,7 @@ class Pet:
     def __init__(self, name, pet_type, owner = None):
         self.name = name 
         if pet_type not in self.PET_TYPES:
-            raise ValueError("Invalid pet type")
+            raise Exception
         self.pet_type = pet_type 
         self.owner = owner 
         Pet.all.append(self)
